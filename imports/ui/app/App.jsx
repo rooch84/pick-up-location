@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Search from '../search-box/Search.jsx';
 import ResultSet from '../result/ResultSet.jsx';
 
+const SR_SEARCH = "pick-up-location-input";
+
 /**
 * Main component that displays the necessary widgets.
 */
@@ -22,8 +24,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="header">Pick-up Location</div>
-        <Search 
+        <label className="header" htmlFor={SR_SEARCH}>Pick-up Location</label>
+        <Search
+          srId={SR_SEARCH}
           search={this.state.search}
           onSearchChange={this.onSearchChange} />
         {

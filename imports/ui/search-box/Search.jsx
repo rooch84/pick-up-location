@@ -15,6 +15,7 @@ export default class Search extends Component {
   render() {
     return (
       <input
+        id={this.props.srId}
         className="search-box"
         type="text"
         placeholder={placeholderText}
@@ -26,6 +27,7 @@ export default class Search extends Component {
 }
 
 Search.propTypes = {
+  srId: PropTypes.string.isRequired,
   search: PropTypes.string.isRequired,
   onSearchChange: PropTypes.func.isRequired
 };
