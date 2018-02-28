@@ -16,6 +16,7 @@
     "phantomjs-prebuilt": "^2.1.16"
   },
   "scripts": {
-    "test": "TEST_BROWSER_DRIVER=phantomjs meteor test --once --driver-package meteortesting:mocha"
+    "test": "TEST_BROWSER_DRIVER=phantomjs meteor test --once --driver-package meteortesting:mocha",
+    "test-as-root": "TEST_BROWSER_DRIVER=phantomjs meteor test --allow-superuser --once --driver-package meteortesting:mocha"
   }
 }
